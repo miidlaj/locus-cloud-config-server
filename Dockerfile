@@ -25,4 +25,4 @@ RUN mvn clean package -DskipTests
 EXPOSE 9000
 
 # Set the command to run the application (assuming your main class is com.example.Application)
-CMD ["java", "-jar", "target/your-application.jar"]
+CMD ["java", "-jar", "target/clound-config-server.jar"]
