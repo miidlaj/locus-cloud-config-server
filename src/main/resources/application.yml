@@ -1,9 +1,9 @@
 server:
-  port: 9296
+  port: 9000
 
 spring:
   application:
-    name: CONFIG-SERVER
+    name: CLOUD-CONFIG-SERVER
   cloud:
     config:
       server:
@@ -17,6 +17,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://43.204.232.113:8761/eureka/
+      defaultZone: http://15.206.125.179:8761/eureka
   instance:
-    hostname: 43.204.232.113
+    hostname: 15.206.125.179
