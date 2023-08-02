@@ -14,11 +14,8 @@ jobs:
     environment: env
     steps:
     - uses: actions/checkout@v3
-    - name: print
-      env:
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: echo $DOCKER_USER
+    - name: Build with Maven
+      run: mvn clean package --file pom.xml
     - name: docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
