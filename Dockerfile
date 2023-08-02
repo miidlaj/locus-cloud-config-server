@@ -1,5 +1,5 @@
-# Use the official OpenJDK image as a parent image
-FROM openjdk:17-jdk-slim-buster
+# Use Alpine Linux with OpenJDK 17 as the base image
+FROM openjdk:17-jdk-alpine3.14
 
 # Set the working directory to /app
 WORKDIR /app
@@ -15,6 +15,7 @@ RUN apk add --no-cache curl tar bash \
 
 # Build the Java application using Maven
 RUN mvn clean package -DskipTests
+
 
 
 # Copy the packaged JAR file into the container at /app
